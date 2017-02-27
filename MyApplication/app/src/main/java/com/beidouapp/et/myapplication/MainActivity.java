@@ -5,10 +5,10 @@ import android.app.FragmentTransaction;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.beidouapp.et.myapplication.activity.BaseActivity;
 import com.beidouapp.et.myapplication.ui.HomePage;
 import com.beidouapp.et.myapplication.ui.LivePage;
 import com.beidouapp.et.myapplication.ui.MatchPage;
@@ -21,7 +21,7 @@ import butterknife.ButterKnife;
 /**
  * 首页
  */
-public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
+public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
     @BindView(R.id.home)
     RadioButton home;
     @BindView(R.id.live)
@@ -38,12 +38,12 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     private int[] icon = {R.mipmap.opy42x, R.mipmap.opy2x, R.mipmap.opy42x, R.mipmap.opy22x, R.mipmap.opy32x};
     private int[] iconSelect = {R.mipmap.oard22x, R.mipmap.opy52x, R.mipmap.oard22x, R.mipmap.opy62x, R.mipmap.opy72x};
     private String[] iconName = {"首页", "直播", "申请视频", "比赛", "我的"};
-    private Drawable d01,d11,d21,d31,d41,d0,d1,d2,d3,d4;
+    private Drawable d01, d11, d21, d31, d41, d0, d1, d2, d3, d4;
     private HomePage homePageFragment;
     private LivePage livePageFragment;
     private MatchPage matchPageFragment;
     private MinePage minePageFragment;
-    private Fragment mCurrent =  new HomePage();
+    private Fragment mCurrent = new HomePage();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,45 +58,50 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     /**
      * 切换我的
      */
-    private void minePage(){
+    private void minePage() {
         if (null == minePageFragment)
             minePageFragment = new MinePage();
         changeFragment(minePageFragment);
     }
+
     /**
      * 切换赛事
      */
-    private void matchPage(){
+    private void matchPage() {
         if (null == matchPageFragment)
             matchPageFragment = new MatchPage();
         changeFragment(matchPageFragment);
     }
+
     /**
      * 切换直播
      */
-    private void livePage(){
+    private void livePage() {
         if (null == livePageFragment)
             livePageFragment = new LivePage();
         changeFragment(livePageFragment);
     }
+
     /**
      * 切换首页
      */
-    private void homePage(){
+    private void homePage() {
         if (null == homePageFragment)
             homePageFragment = new HomePage();
         changeFragment(homePageFragment);
     }
+
     /**
      * 隐藏、显示和添加碎片
+     *
      * @param f
      */
-    private void changeFragment(Fragment f){
+    private void changeFragment(Fragment f) {
         if (mCurrent != f) {
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-            if (!f.isAdded()){ //如果没有被添加
-                fragmentTransaction.hide(mCurrent).add(R.id.frameLayout,f).commit();
-            }else{
+            if (!f.isAdded()) { //如果没有被添加
+                fragmentTransaction.hide(mCurrent).add(R.id.frameLayout, f).commit();
+            } else {
                 fragmentTransaction.hide(mCurrent).show(f).commit();
             }
             mCurrent = f;
@@ -147,22 +152,22 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         switch (checkedId) {
             case R.id.home:
                 navigation();
-                changeNavigation(home,d0);
+                changeNavigation(home, d0);
                 homePage();
                 break;
             case R.id.live:
                 navigation();
-                changeNavigation(live,d1);
+                changeNavigation(live, d1);
                 livePage();
                 break;
             case R.id.match:
                 navigation();
-                changeNavigation(match,d3);
+                changeNavigation(match, d3);
                 matchPage();
                 break;
             case R.id.mine:
                 navigation();
-                changeNavigation(mine,d4);
+                changeNavigation(mine, d4);
                 minePage();
                 break;
             default:
@@ -170,7 +175,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         }
     }
 
-    private void navigation(){
+    private void navigation() {
         int c = this.getResources().getColor(R.color.hui);
         home.setTextColor(c);
         home.setCompoundDrawablesRelativeWithIntrinsicBounds(null, d01, null, null);
@@ -183,13 +188,15 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         mine.setTextColor(c);
         mine.setCompoundDrawablesRelativeWithIntrinsicBounds(null, d41, null, null);
     }
+
     /**
      * 改变导航栏图标
+     *
      * @param rb
      * @param dra
      */
-    private void changeNavigation(RadioButton rb,Drawable dra){
+    private void changeNavigation(RadioButton rb, Drawable dra) {
         rb.setTextColor(Color.RED);
-        rb.setCompoundDrawablesRelativeWithIntrinsicBounds(null,dra,null,null);
+        rb.setCompoundDrawablesRelativeWithIntrinsicBounds(null, dra, null, null);
     }
 }
