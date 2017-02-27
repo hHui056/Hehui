@@ -89,17 +89,17 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     }
     /**
      * 隐藏、显示和添加碎片
-     * @param to
+     * @param f
      */
-    private void changeFragment(Fragment to){
-        if (mCurrent != to) {
+    private void changeFragment(Fragment f){
+        if (mCurrent != f) {
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-            if (!to.isAdded()){ //如果没有被添加
-                fragmentTransaction.hide(mCurrent).add(R.id.frameLayout,to).commit();
+            if (!f.isAdded()){ //如果没有被添加
+                fragmentTransaction.hide(mCurrent).add(R.id.frameLayout,f).commit();
             }else{
-                fragmentTransaction.hide(mCurrent).show(to).commit();
+                fragmentTransaction.hide(mCurrent).show(f).commit();
             }
-            mCurrent = to;
+            mCurrent = f;
         }
     }
 
