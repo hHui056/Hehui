@@ -137,7 +137,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
     /**
      * 底部导航栏的监听事件
-     *
      * @param group
      * @param checkedId
      */
@@ -170,6 +169,9 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         }
     }
 
+    /**
+     * 导航栏未被选择时
+     */
     private void navigation(){
         int c = this.getResources().getColor(R.color.hui);
         home.setTextColor(c);

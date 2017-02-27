@@ -6,5 +6,8 @@
 
     //字体颜色
     <color name="black">#000000</color>
+    //导航栏默认字体颜色
     <color name="hui">#707070</color>
+    //信息按钮点击颜色
+    <color name="colorIv">#F7F7F7</color>
 </resources>
