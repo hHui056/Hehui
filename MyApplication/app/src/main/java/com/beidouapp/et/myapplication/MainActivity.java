@@ -142,6 +142,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
     /**
      * 底部导航栏的监听事件
+     *
      * @param group
      * @param checkedId
      */
@@ -174,14 +175,10 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         }
     }
 
-<<<<<<< HEAD
-    private void navigation() {
-=======
     /**
      * 导航栏未被选择时
      */
-    private void navigation(){
->>>>>>> 15c7e8bdf84b4c3b7d62624f951f2cfb318cbc64
+    private void navigation() {
         int c = this.getResources().getColor(R.color.hui);
         home.setTextColor(c);
         home.setCompoundDrawablesRelativeWithIntrinsicBounds(null, d01, null, null);
