@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     @BindView(R.id.group)
     RadioGroup group;
     //对gridVeiw获取文本及图片
-    private int[] icon = {R.mipmap.opy42x, R.mipmap.opy2x, R.mipmap.opy42x, R.mipmap.opy22x, R.mipmap.opy32x};
-    private int[] iconSelect = {R.mipmap.oard22x, R.mipmap.opy52x, R.mipmap.oard22x, R.mipmap.opy62x, R.mipmap.opy72x};
+    private int[] icon = {R.mipmap.opy42x, R.mipmap.opy2x, R.mipmap.rt2x, R.mipmap.opy22x, R.mipmap.opy32x};
+    private int[] iconSelect = {R.mipmap.oard22x, R.mipmap.opy52x, R.mipmap.rt2x, R.mipmap.opy62x, R.mipmap.opy72x};
     private String[] iconName = {"首页", "直播", "申请视频", "比赛", "我的"};
     private Drawable d01,d11,d21,d31,d41,d0,d1,d2,d3,d4;
     private HomePage homePageFragment;
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         video.setText(iconName[2]);
         match.setText(iconName[3]);
         mine.setText(iconName[4]);
-        int size = 140;
+        int size = 140; //图片大小
         //选择前
         d01 = this.getResources().getDrawable(icon[0]);
         d01.setBounds(0,0,size,size);
