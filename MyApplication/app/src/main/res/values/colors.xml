@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    //字体颜色
+    <color name="black">#000000</color>
+    <color name="hui">#707070</color>
 </resources>
