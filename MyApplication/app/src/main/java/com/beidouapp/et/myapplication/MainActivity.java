@@ -112,24 +112,35 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         video.setText(iconName[2]);
         match.setText(iconName[3]);
         mine.setText(iconName[4]);
+        int size = 140;
         //选择前
         d01 = this.getResources().getDrawable(icon[0]);
+        d01.setBounds(0,0,size,size);
         d11 = this.getResources().getDrawable(icon[1]);
+        d11.setBounds(0,0,size,size);
         d21 = this.getResources().getDrawable(icon[2]);
+        d21.setBounds(0,0,size,size);
         d31 = this.getResources().getDrawable(icon[3]);
+        d31.setBounds(0,0,size,size);
         d41 = this.getResources().getDrawable(icon[4]);
+        d41.setBounds(0,0,size,size);
         //选择后
         d0 = this.getResources().getDrawable(iconSelect[0]);
+        d0.setBounds(0,0,size,size);
         d1 = this.getResources().getDrawable(iconSelect[1]);
+        d1.setBounds(0,0,size,size);
         d2 = this.getResources().getDrawable(iconSelect[2]);
+        d2.setBounds(0,0,size,size);
         d3 = this.getResources().getDrawable(iconSelect[3]);
+        d3.setBounds(0,0,size,size);
         d4 = this.getResources().getDrawable(iconSelect[4]);
+        d4.setBounds(0,0,size,size);
         //初始化图标
-        home.setCompoundDrawablesRelativeWithIntrinsicBounds(null, d0, null, null);
-        live.setCompoundDrawablesRelativeWithIntrinsicBounds(null, d11, null, null);
-        video.setCompoundDrawablesRelativeWithIntrinsicBounds(null, d21, null, null);
-        match.setCompoundDrawablesRelativeWithIntrinsicBounds(null, d31, null, null);
-        mine.setCompoundDrawablesRelativeWithIntrinsicBounds(null, d41, null, null);
+        home.setCompoundDrawables(null, d0, null, null);
+        live.setCompoundDrawables(null, d11, null, null);
+        video.setCompoundDrawables(null, d21, null, null);
+        match.setCompoundDrawables(null, d31, null, null);
+        mine.setCompoundDrawables(null, d41, null, null);
         //TODO 初始化界面
         home.setTextColor(Color.RED);
         homePage();
@@ -175,15 +186,15 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     private void navigation(){
         int c = this.getResources().getColor(R.color.hui);
         home.setTextColor(c);
-        home.setCompoundDrawablesRelativeWithIntrinsicBounds(null, d01, null, null);
+        home.setCompoundDrawables(null, d01, null, null);
         live.setTextColor(c);
-        live.setCompoundDrawablesRelativeWithIntrinsicBounds(null, d11, null, null);
+        live.setCompoundDrawables(null, d11, null, null);
         video.setTextColor(c);
-        video.setCompoundDrawablesRelativeWithIntrinsicBounds(null, d21, null, null);
+        video.setCompoundDrawables(null, d21, null, null);
         match.setTextColor(c);
-        match.setCompoundDrawablesRelativeWithIntrinsicBounds(null, d31, null, null);
+        match.setCompoundDrawables(null, d31, null, null);
         mine.setTextColor(c);
-        mine.setCompoundDrawablesRelativeWithIntrinsicBounds(null, d41, null, null);
+        mine.setCompoundDrawables(null, d41, null, null);
     }
     /**
      * 改变导航栏图标
@@ -192,6 +203,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
      */
     private void changeNavigation(RadioButton rb,Drawable dra){
         rb.setTextColor(Color.RED);
-        rb.setCompoundDrawablesRelativeWithIntrinsicBounds(null,dra,null,null);
+        rb.setCompoundDrawables(null,dra,null,null);
     }
 }
