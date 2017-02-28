@@ -223,6 +223,8 @@ public class AutoListView extends ListView implements OnScrollListener {
                 }
                 break;
             case MotionEvent.ACTION_CANCEL:
+
+                break;
             case MotionEvent.ACTION_UP:
                 if (state == PULL) {
                     state = NONE;
@@ -236,6 +238,8 @@ public class AutoListView extends ListView implements OnScrollListener {
                 break;
             case MotionEvent.ACTION_MOVE:
                 whenMove(ev);
+                break;
+            default:
                 break;
         }
         return super.onTouchEvent(ev);

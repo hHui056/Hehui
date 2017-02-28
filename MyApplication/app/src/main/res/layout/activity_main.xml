@@ -5,10 +5,35 @@
     android:layout_height="match_parent"
     tools:context="com.beidouapp.et.myapplication.MainActivity">
 
+    <RelativeLayout
+        android:id="@+id/live_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/mid_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="广场"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/message_back"
+            android:clickable="true"
+            android:src="@mipmap/message" />
+    </RelativeLayout>
+
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/live_bar"
         android:background="@android:color/holo_blue_light" />
 
     <RadioGroup
