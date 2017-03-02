@@ -118,7 +118,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
     /**
      * 隐藏、显示和添加碎片
-     *
      * @param f
      */
     private void changeFragment(Fragment f) {
@@ -178,7 +177,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
     /**
      * 底部导航栏的监听事件
-     *
      * @param group
      * @param checkedId
      */
@@ -231,7 +229,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
     /**
      * 改变导航栏图标
-     *
      * @param rb
      * @param dra
      */
