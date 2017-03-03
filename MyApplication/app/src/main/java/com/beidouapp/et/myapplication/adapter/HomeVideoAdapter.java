@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 
 import com.beidouapp.et.myapplication.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
@@ -19,7 +20,7 @@ import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
  * 创建时间:2017/2/28 15:54
  */
 public class HomeVideoAdapter extends BaseAdapter {
-    private List listData;
+    private List listData = new ArrayList();
     private Context context;
 
     public HomeVideoAdapter() {
@@ -51,8 +52,8 @@ public class HomeVideoAdapter extends BaseAdapter {
         if (null == convertView){
             convertView = LayoutInflater.from(context).inflate(R.layout.home_video_info,null);
             JCVideoPlayer video = (JCVideoPlayer) convertView.findViewById(R.id.video);
-            video.setUp("http://2449.vod.myqcloud.com/2449_43b6f696980311e59ed467f22794e792.f20.mp4",
-                    "试试就试试");
+            video.setUp(listData.get(position).toString(),
+                    "试试"+position);
         }
         return convertView;
     }

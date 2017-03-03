@@ -57,15 +57,15 @@ public class HomePage extends Fragment {
     private void initView() {
 
 
-
+        String[] url = {"http://2449.vod.myqcloud.com/2449_43b6f696980311e59ed467f22794e792.f20.mp4","http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4","http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"};
         /**
          * 给ListView添加数据条数
          */
-        List list = new ArrayList();
-        for (int i = 0; i < 10; i++) {
-            list.add("" + i);
+        List<String> list = new ArrayList<>();
+        for (int i = 0; i < 3; i++) {
+            Log.e("dddd",url[i]);
+            list.add(url[i]);
         }
-
         listLive.setAdapter(new HomeVideoAdapter(list, getActivity()));
         listLive.setFocusable(false);
     }
