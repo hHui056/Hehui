@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.beidouapp.et.myapplication.MainActivity">
 
     <RelativeLayout
@@ -33,8 +34,8 @@
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/live_bar"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:background="@android:color/holo_blue_light"
         />
 
@@ -42,7 +43,6 @@
         android:id="@+id/group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:background="@android:color/white"
         android:orientation="horizontal">
 
@@ -80,6 +80,7 @@
             style="@style/Navigation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            />
     </RadioGroup>
-</RelativeLayout>
+</LinearLayout>
