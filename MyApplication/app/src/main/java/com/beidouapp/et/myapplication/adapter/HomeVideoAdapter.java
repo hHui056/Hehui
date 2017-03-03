@@ -11,6 +11,8 @@ import com.beidouapp.et.myapplication.R;
 
 import java.util.List;
 
+import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
+
 /**
  * 项目名称：MyApplication
  * 创建人：huzy
@@ -48,6 +50,9 @@ public class HomeVideoAdapter extends BaseAdapter {
         Log.e("list",listData.toString());
         if (null == convertView){
             convertView = LayoutInflater.from(context).inflate(R.layout.home_video_info,null);
+            JCVideoPlayer video = (JCVideoPlayer) convertView.findViewById(R.id.video);
+            video.setUp("http://2449.vod.myqcloud.com/2449_43b6f696980311e59ed467f22794e792.f20.mp4",
+                    "试试就试试");
         }
         return convertView;
     }

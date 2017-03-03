@@ -20,6 +20,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
 
 /**
  * 首页
@@ -44,10 +45,19 @@ public class HomePage extends Fragment {
         return view;
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        JCVideoPlayer.releaseAllVideos();
+    }
+
     /**
      * 初始化视频列表
      */
     private void initView() {
+
+
+
         /**
          * 给ListView添加数据条数
          */
@@ -57,7 +67,6 @@ public class HomePage extends Fragment {
         }
 
         listLive.setAdapter(new HomeVideoAdapter(list, getActivity()));
-        //将scrollView滑动到最顶端，默认是listView顶端；
-        scrollViews.smoothScrollTo(0,0);
+        listLive.setFocusable(false);
     }
 }

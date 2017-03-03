@@ -54,12 +54,10 @@
             android:drawableStart="@mipmap/ape2x"
             />
     </RelativeLayout>
-    <ImageView
-        android:id="@+id/videoTest"
+    <fm.jiecao.jcvideoplayer_lib.JCVideoPlayer
+        android:id="@+id/video"
         android:layout_width="match_parent"
         android:layout_height="255dp"
-        android:src="@mipmap/th0"
-        android:scaleType="fitXY"
         />
     <LinearLayout
         android:paddingTop="5dp"
