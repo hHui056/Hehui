@@ -6,55 +6,57 @@
     android:background="@android:color/white"
     android:scrollbars="none"
     >
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="65dp">
+
         <ImageView
             android:id="@+id/head"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_centerVertical="true"
-            android:src="@mipmap/th0"
-            android:scaleType="centerCrop"
             android:layout_margin="5dp"
-            />
+            android:scaleType="centerCrop"
+            android:src="@mipmap/th0" />
+
         <TextView
             android:id="@+id/head_Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="小蚂蚁"
-            android:layout_toRightOf="@+id/head"
             android:layout_marginTop="5dp"
-            android:textSize="19sp"
-            />
+            android:layout_toRightOf="@+id/head"
+            android:text="小蚂蚁"
+            android:textSize="19sp" />
+
         <TextView
             android:id="@+id/time_person"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2小时/1222人观看"
-            android:layout_toRightOf="@+id/head"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="10dp"
-            />
+            android:layout_toRightOf="@+id/head"
+            android:text="2小时/1222人观看" />
+
         <Button
             android:id="@+id/attention"
             android:layout_width="70dp"
             android:layout_height="40dp"
-            android:text="+ 关注"
-            android:layout_toRightOf="@+id/head_Name"
             android:layout_marginLeft="15dp"
-            />
+            android:layout_toRightOf="@+id/head_Name"
+            android:text="+ 关注" />
+
         <TextView
             android:id="@+id/address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="  羽立方羽毛球馆"
-            android:textColor="@android:color/holo_blue_light"
             android:layout_alignParentEnd="true"
             android:layout_margin="8dp"
             android:drawableStart="@mipmap/ape2x"
-            />
+            android:text="  羽立方羽毛球馆"
+            android:textColor="@android:color/holo_blue_light" />
     </RelativeLayout>
+
     <fm.jiecao.jcvideoplayer_lib.JCVideoPlayer
         android:id="@+id/video"
         android:layout_width="match_parent"

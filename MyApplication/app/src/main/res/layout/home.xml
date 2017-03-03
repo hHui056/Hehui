@@ -2,24 +2,23 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/scrollViews"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/iv"
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_img"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:src="@mipmap/th1"
-            />
+            android:layout_height="200dp" />
+
         <com.beidouapp.et.myapplication.view.AdapterScrollListView
             android:id="@+id/list_live"
-            android:layout_below="@+id/iv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="none"
-            />
+            android:layout_below="@+id/vp_img"
+            android:scrollbars="none" />
     </RelativeLayout>
 
 </ScrollView>

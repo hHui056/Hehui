@@ -6,6 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.beidouapp.et.myapplication.R;
 
@@ -20,6 +23,7 @@ import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
  * 创建时间:2017/2/28 15:54
  */
 public class HomeVideoAdapter extends BaseAdapter {
+    public ViewHolder viewHolder = null;
     private List listData = new ArrayList();
     private Context context;
 
@@ -48,13 +52,29 @@ public class HomeVideoAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Log.e("list",listData.toString());
-        if (null == convertView){
-            convertView = LayoutInflater.from(context).inflate(R.layout.home_video_info,null);
-            JCVideoPlayer video = (JCVideoPlayer) convertView.findViewById(R.id.video);
-            video.setUp(listData.get(position).toString(),
-                    "试试"+position);
+        Log.e("list", listData.toString());
+        if (convertView == null) {
+            viewHolder = new ViewHolder();
+            convertView = LayoutInflater.from(context).inflate(R.layout.home_video_info, null);
+            viewHolder.videoPlayer = (JCVideoPlayer) convertView.findViewById(R.id.video);
+
+
+
+            convertView.setTag(viewHolder);
+
+        }else{
+            viewHolder = (ViewHolder) convertView.getTag();
         }
+
+        viewHolder.videoPlayer.setUp(listData.get(position).toString(), "试试" + position);
         return convertView;
+    }
+
+    public class ViewHolder {
+        Button btn_guanzhu;
+        TextView txt_name, txt_address, txt_watch_info, txt_zan_num, txt_pinlun_num;
+        JCVideoPlayer videoPlayer;
+        ImageView user_icon, img_zan, img_pinlun, img_share;
+
     }
 }
