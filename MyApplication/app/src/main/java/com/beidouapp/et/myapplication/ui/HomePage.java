@@ -19,6 +19,7 @@ import com.beidouapp.et.myapplication.R;
 import com.beidouapp.et.myapplication.adapter.HeaderAdapter;
 import com.beidouapp.et.myapplication.adapter.HomeVideoAdapter;
 import com.beidouapp.et.myapplication.bean.CarouselImage;
+import com.beidouapp.et.myapplication.utils.Constants;
 import com.beidouapp.et.myapplication.view.AdapterScrollListView;
 
 import java.util.ArrayList;
@@ -101,7 +102,7 @@ public class HomePage extends Fragment {
     private void initView() {
 
 
-        String[] url = {"http://2449.vod.myqcloud.com/2449_43b6f696980311e59ed467f22794e792.f20.mp4", "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4", "http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4"};
+        String[] url = {Constants.test_videos[0], Constants.test_videos[1], Constants.test_videos[2]};
         /**
          * 给ListView添加数据条数
          */
@@ -123,7 +124,7 @@ public class HomePage extends Fragment {
 
         for (int i = 0; i < mBottomImages.length; i++) {
             ImageView imageView = new ImageView(getActivity());
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(10, 10);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(40, 40);
             params.setMargins(5, 0, 5, 0);
             imageView.setLayoutParams(params);
             if (i == 0) {
@@ -139,7 +140,6 @@ public class HomePage extends Fragment {
         }
 
         vp_hot.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-
                                            //图片左右滑动时候，将当前页的圆点图片设为选中状态
                                            @Override
                                            public void onPageSelected(int position) {
@@ -152,7 +152,6 @@ public class HomePage extends Fragment {
                                                        mBottomImages[j].setBackgroundResource(R.drawable.indicator_not_select);
                                                    }
                                                }
-
                                                //设置全局变量，currentIndex为选中图标的 index
                                                autoCurrIndex = position;
                                            }
@@ -167,7 +166,7 @@ public class HomePage extends Fragment {
                                        }
         );
 
-        // 设置自动轮播图片，1s后执行，周期是1s
+        // 设置自动轮播图片，2s后执行，周期是2s
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -179,17 +178,17 @@ public class HomePage extends Fragment {
                 message.arg1 = autoCurrIndex + 1;
                 mHandler.sendMessage(message);
             }
-        }, 1000, 1000);
+        }, 2000, 2000);
     }
 
     class ImageTask extends AsyncTask<String, Void, List<CarouselImage>> {
         @Override
         protected List<CarouselImage> doInBackground(String... params) {
             List<CarouselImage> articles = new ArrayList<CarouselImage>();
-            articles.add(new CarouselImage("", "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1488778555559&di=9149ea0d0faa2ee483079f623cea571a&imgtype=0&src=http%3A%2F%2Fupload.art.ifeng.com%2F2015%2F0811%2F1439260959533.jpg"));
-            articles.add(new CarouselImage("", "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1488778598074&di=9c67a6ea1d4711aaf1906b7a77f3da5d&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F6a600c338744ebf8bd33cee3dcf9d72a6159a7a8.jpg"));
-            articles.add(new CarouselImage("", "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1488778598073&di=674a806e9ac75ea7c64220ac17255c3b&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F37d12f2eb9389b50af364a8e8035e5dde6116e25.jpg"));
-            articles.add(new CarouselImage("", "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1488778598073&di=dd430d2985e0e95dba52d6fb9bb2ae27&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Ff11f3a292df5e0fe6dd123dd596034a85fdf7225.jpg"));
+            articles.add(new CarouselImage("", Constants.test_imgs[0]));
+            articles.add(new CarouselImage("", Constants.test_imgs[1]));
+            articles.add(new CarouselImage("", Constants.test_imgs[2]));
+            articles.add(new CarouselImage("", Constants.test_imgs[3]));
             return articles;
         }
 
