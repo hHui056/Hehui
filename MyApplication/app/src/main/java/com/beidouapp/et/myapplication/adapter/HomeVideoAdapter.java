@@ -15,7 +15,7 @@ import com.beidouapp.et.myapplication.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
+import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
 
 /**
  * 项目名称：MyApplication
@@ -56,24 +56,22 @@ public class HomeVideoAdapter extends BaseAdapter {
         if (convertView == null) {
             viewHolder = new ViewHolder();
             convertView = LayoutInflater.from(context).inflate(R.layout.home_video_info, null);
-            viewHolder.videoPlayer = (JCVideoPlayer) convertView.findViewById(R.id.video);
-
-
+            viewHolder.videoPlayer = (JCVideoPlayerStandard) convertView.findViewById(R.id.video);
 
             convertView.setTag(viewHolder);
-
-        }else{
+        } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
+        viewHolder.videoPlayer.setUp(listData.get(position).toString(), JCVideoPlayerStandard.SCREEN_LAYOUT_NORMAL, "试试" + position);
 
-        viewHolder.videoPlayer.setUp(listData.get(position).toString(), "试试" + position);
+        viewHolder.videoPlayer.thumbImageView.setImageResource(R.drawable.test);
         return convertView;
     }
 
     public class ViewHolder {
         Button btn_guanzhu;
         TextView txt_name, txt_address, txt_watch_info, txt_zan_num, txt_pinlun_num;
-        JCVideoPlayer videoPlayer;
+        JCVideoPlayerStandard videoPlayer;
         ImageView user_icon, img_zan, img_pinlun, img_share;
 
     }

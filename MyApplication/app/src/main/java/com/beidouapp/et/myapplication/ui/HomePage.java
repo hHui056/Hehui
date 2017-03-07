@@ -29,7 +29,6 @@ import java.util.TimerTask;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
 
 /**
  * 首页
@@ -84,8 +83,8 @@ public class HomePage extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
-        JCVideoPlayer.releaseAllVideos();
     }
+
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -136,7 +135,6 @@ public class HomePage extends Fragment {
             mBottomImages[i] = imageView;
             //把指示作用的原点图片加入底部的视图中
             llHottestIndicator.addView(mBottomImages[i]);
-
         }
 
         vp_hot.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -166,7 +164,7 @@ public class HomePage extends Fragment {
                                        }
         );
 
-        // 设置自动轮播图片，2s后执行，周期是2s
+        // 设置自动轮播图片，5s后执行，周期是5s
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -178,7 +176,7 @@ public class HomePage extends Fragment {
                 message.arg1 = autoCurrIndex + 1;
                 mHandler.sendMessage(message);
             }
-        }, 2000, 2000);
+        }, 5000, 5000);
     }
 
     class ImageTask extends AsyncTask<String, Void, List<CarouselImage>> {

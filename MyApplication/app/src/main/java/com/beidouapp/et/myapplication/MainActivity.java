@@ -19,6 +19,7 @@ import com.beidouapp.et.myapplication.ui.MinePage;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
 
 
 /**
@@ -86,6 +87,21 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         }
         mid_text.setText("赛事");
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (JCVideoPlayer.backPress()) {
+            return;
+        }
+        super.onBackPressed();
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        JCVideoPlayer.releaseAllVideos();
     }
 
     /**
