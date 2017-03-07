@@ -65,15 +65,19 @@ public class MatchInformationAdapter extends BaseAdapter {
             viewHolder.imageView.setImageResource(R.mipmap.th00);
         }
         if (position == 1){
+            viewHolder.btn_show.setVisibility(View.GONE);
             viewHolder.imageView.setImageResource(R.mipmap.th01);
         }
         if (position == 2){
+            viewHolder.btn_show.setVisibility(View.GONE);
             viewHolder.imageView.setImageResource(R.mipmap.th03);
         }
         if (position == 3){
+            viewHolder.btn_show.setVisibility(View.GONE);
             viewHolder.imageView.setImageResource(R.mipmap.th02);
         }
         if (position == 4){
+            viewHolder.btn_show.setVisibility(View.GONE);
             viewHolder.imageView.setImageResource(R.mipmap.th04);
         }
 

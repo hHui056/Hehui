@@ -106,10 +106,10 @@
     </LinearLayout>
     <Button
         android:id="@+id/btn_show"
-        android:layout_width="75dp"
-        android:layout_height="40dp"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
         android:text="热门"
-        android:textSize="25sp"
+        android:textSize="@dimen/match_tvb_size"
         android:layout_alignParentRight="true"
         android:textColor="@android:color/white"
         android:background="@android:color/holo_orange_light"
