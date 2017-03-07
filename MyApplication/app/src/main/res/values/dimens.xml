@@ -3,8 +3,10 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    //首页  视频title昵称字体大小
+    <dimen name="home_tv_title">19sp</dimen>
     //比赛信息item字体大小
-    <dimen name="match_tv_size">15sp</dimen>
+    <dimen name="normal_tv_size">15sp</dimen>
     //比赛信息item最下方字体大小
     <dimen name="match_tvb_size">20sp</dimen>
 </resources>
