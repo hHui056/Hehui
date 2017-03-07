@@ -58,8 +58,6 @@ public class HomeVideoAdapter extends BaseAdapter {
             convertView = LayoutInflater.from(context).inflate(R.layout.home_video_info, null);
             viewHolder.videoPlayer = (JCVideoPlayer) convertView.findViewById(R.id.video);
 
-
-
             convertView.setTag(viewHolder);
 
         }else{
@@ -67,6 +65,7 @@ public class HomeVideoAdapter extends BaseAdapter {
         }
 
         viewHolder.videoPlayer.setUp(listData.get(position).toString(), "试试" + position);
+        viewHolder.videoPlayer.ivThumb.setImageResource(R.mipmap.ic_launcher);
         return convertView;
     }
 
@@ -75,6 +74,5 @@ public class HomeVideoAdapter extends BaseAdapter {
         TextView txt_name, txt_address, txt_watch_info, txt_zan_num, txt_pinlun_num;
         JCVideoPlayer videoPlayer;
         ImageView user_icon, img_zan, img_pinlun, img_share;
-
     }
 }
