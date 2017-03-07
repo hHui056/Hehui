@@ -80,6 +80,9 @@ public class HomePage extends Fragment {
         return view;
     }
 
+    /**
+     * 视频播放器（节操）的操作
+     */
     @Override
     public void onPause() {
         super.onPause();
@@ -99,19 +102,16 @@ public class HomePage extends Fragment {
      * 初始化视频列表
      */
     private void initView() {
-
-
         String[] url = {Constants.test_videos[0], Constants.test_videos[1], Constants.test_videos[2]};
         /**
          * 给ListView添加数据条数
          */
         List<String> list = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
-            Log.e("dddd", url[i]);
             list.add(url[i]);
         }
         listLive.setAdapter(new HomeVideoAdapter(list, getActivity()));
-        listLive.setFocusable(false);
+        listLive.setFocusable(false);   //对ScrollView嵌套的ListView设置为不可获取焦点，以免两者产生滑动冲突
     }
 
     private void setUpViewPager(final List<CarouselImage> headerArticles) {

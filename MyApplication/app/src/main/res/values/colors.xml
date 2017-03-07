@@ -10,4 +10,6 @@
     <color name="hui">#707070</color>
     //信息按钮点击颜色
     <color name="colorIv">#F7F7F7</color>
+    //赛事item中最下方字体颜色
+    <color name="matchTc">#5D839A</color>
 </resources>
