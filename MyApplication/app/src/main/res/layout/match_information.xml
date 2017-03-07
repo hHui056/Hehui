@@ -12,8 +12,8 @@
         >
         <ImageView
             android:id="@+id/match_title_iv"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:scaleType="fitXY"
@@ -22,7 +22,7 @@
             android:layout_marginStart="10dp"
             android:id="@+id/match_information"
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="110dp"
             android:layout_weight="1"
             layout="@layout/match_information_item"
             />
@@ -40,7 +40,7 @@
             android:layout_height="match_parent"
             android:text="比赛规程"
             android:textColor="@color/matchTc"
-            android:textSize="22sp"
+            android:textSize="@dimen/match_tvb_size"
             android:gravity="center"
             />
         <TextView
@@ -49,16 +49,17 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="奖金"
+            android:layout_marginEnd="30dp"
             android:textColor="@color/matchTc"
-            android:textSize="22sp"
+            android:textSize="@dimen/match_tvb_size"
             android:gravity="center"
             />
         <Button
             android:id="@+id/btn_apply"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
             android:text="报名"
-            android:textSize="22sp"
+            android:textSize="@dimen/match_tvb_size"
             android:textColor="@android:color/white"
             android:background="@android:color/holo_red_light"
             />

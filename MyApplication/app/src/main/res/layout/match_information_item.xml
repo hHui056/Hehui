@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="报名时间："
-                android:textSize="@dimen/match_tv_size"
+                android:textSize="@dimen/normal_tv_size"
                 />
             <TextView
                 android:id="@+id/name_time"
@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:lines="1"
                 android:text="02/10-02/12"
-                android:textSize="@dimen/match_tv_size"
+                android:textSize="@dimen/normal_tv_size"
                 />
         </LinearLayout>
         <LinearLayout
@@ -48,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="比赛时间："
-                android:textSize="@dimen/match_tv_size"
+                android:textSize="@dimen/normal_tv_size"
                 />
             <TextView
                 android:id="@+id/match_time"
@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:lines="1"
                 android:text="02/13"
-                android:textSize="@dimen/match_tv_size"
+                android:textSize="@dimen/normal_tv_size"
                 />
         </LinearLayout>
         <LinearLayout
@@ -69,7 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="比赛地点："
-                android:textSize="@dimen/match_tv_size"
+                android:textSize="@dimen/normal_tv_size"
                 />
             <TextView
                 android:id="@+id/match_address"
@@ -78,7 +78,7 @@
                 android:lines="1"
                 android:text="  羽立方羽毛球馆"
                 android:drawableLeft="@mipmap/ape2x"
-                android:textSize="@dimen/match_tv_size"
+                android:textSize="@dimen/normal_tv_size"
                 android:textColor="@android:color/holo_blue_light"
                 />
         </LinearLayout>
@@ -92,7 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="报  名  费："
-                android:textSize="@dimen/match_tv_size"
+                android:textSize="@dimen/normal_tv_size"
                 />
             <TextView
                 android:id="@+id/name_price"
@@ -100,16 +100,16 @@
                 android:layout_height="wrap_content"
                 android:lines="1"
                 android:text="￥20/人"
-                android:textSize="@dimen/match_tv_size"
+                android:textSize="@dimen/normal_tv_size"
                 />
         </LinearLayout>
     </LinearLayout>
     <Button
         android:id="@+id/btn_show"
-        android:layout_width="75dp"
-        android:layout_height="40dp"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
         android:text="热门"
-        android:textSize="25sp"
+        android:textSize="@dimen/match_tvb_size"
         android:layout_alignParentRight="true"
         android:textColor="@android:color/white"
         android:background="@android:color/holo_orange_light"
