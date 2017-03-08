@@ -40,4 +40,8 @@ dependencies {
      */
     compile 'fm.jiecao:jiecaovideoplayer:5.5'
     compile 'com.android.support:support-annotations:24.2.0'
+    /**
+     * 圆形头像
+     */
+    compile 'de.hdodenhof:circleimageview:2.1.0'
 }

@@ -12,5 +12,5 @@
     <color name="colorIv">#F7F7F7</color>
     //赛事item中最下方字体颜色
     <color name="matchTc">#5D839A</color>
-    <color name="white_fafaf8">#FAFAF8</color>
+    <!--<color name="white_fafaf8">#FAFAF8</color>-->
 </resources>

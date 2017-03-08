@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@android:color/white"
-    >
+    android:background="@android:color/white">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="210dp">
@@ -21,6 +21,28 @@
             android:layout_alignParentRight="true"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/titleCircleIv"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@mipmap/th00"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="35dp"
+            />
+        <TextView
+            android:id="@+id/titleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="爪子哇"
+            android:textColor="@android:color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/match_tvb_size"
+            android:layout_marginBottom="8dp"
             />
     </RelativeLayout>
     <LinearLayout
