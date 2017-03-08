@@ -12,6 +12,7 @@
         <item name="android:button">@null</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/hui</item>
+        <item name="android:textSize">@dimen/normal_tv_size</item>
     </style>
 
     <style name="txt_style">
@@ -44,4 +45,8 @@
         <item name="android:layout_height">21dip</item>
         <item name="android:layout_gravity">center</item>
     </style>
+    <!--//我的(模块) 字体的格式-->
+    <!--<style name="mine_mid_tv">-->
+        <!--<item name="android:textSize">@dimen/normal_tv_size</item>-->
+    <!--</style>-->
 </resources>
