@@ -477,8 +477,8 @@ public class SDKContext implements ISDKContext, IMessageCenterCallback, OnDiscov
 
     @Override
     public String getSdkVersion() {
-        // 这里记录最后一次修改时间，2017/3/06  16:35 ET
-        return "4.0.0.3";
+        // 这里记录最后一次修改时间，2017/7/6  16:35 ET
+        return "4.0.1.0";
     }
 
     @Override

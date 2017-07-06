@@ -61,9 +61,9 @@ public class MqttNetworkConnect implements INetworkConnect {
                 .setUserName(mContext.getContextParameters().getUid()).set(EtKeyConstant.PLATFORM_FOR_S_SDK, SDKContext.PLATFORM_FOR_A_SDK);
         // clean session 取非，是因为服务器1：保存离线消息，0：不保存离线消息。
         // connecttimeout 限制在5 - 60秒之间
-        int connecttimeout = Math.max(Math.min(mConnectOptions.getConnectionTimeout(), 5), 60);
+        int connecttimeout = Math.max(Math.min(mConnectOptions.getConnectionTimeout(), 60), 5);
         //mqtt心跳时间 限制在15 - 300 s 之间
-        short mqttKeepAliveInterval = (short) Math.max(Math.min(mConnectOptions.getKeepAliveInterval(), 15), 300);
+        short mqttKeepAliveInterval = (short) Math.max(Math.min(mConnectOptions.getKeepAliveInterval(), 300), 15);
         etContext.setDefaultInstanceTimeout(connecttimeout * 1000L).setDefaultQos(1).setKeepAlive(mqttKeepAliveInterval).setCleanSession(!mConnectOptions.getCleanSession())
                 .setServerPort(mContext.getContextParameters().getBlanceServerPort());
 

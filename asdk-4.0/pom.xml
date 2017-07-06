@@ -6,10 +6,10 @@
 
     <groupId>com.beidouapp.asdk</groupId>
     <artifactId>asdk</artifactId>
-    <version>4.0.0.3</version>
+    <version>4.0.1.0</version>
 
     <properties>
-        <module.version>4.0.0.3</module.version>
+        <module.version>4.0.1.0</module.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss.sss</maven.build.timestamp.format>
         <maven.compiler.source>1.6</maven.compiler.source>
