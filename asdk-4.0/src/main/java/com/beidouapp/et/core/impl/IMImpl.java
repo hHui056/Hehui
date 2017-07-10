@@ -167,6 +167,11 @@ public class IMImpl implements IM {
         }
     }
 
+    /**
+     * 初始化消息监听
+     *
+     * @return
+     */
     private Listener initMessageListener() {
         return new Listener() {
             @Override

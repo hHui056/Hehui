@@ -698,6 +698,7 @@ public class MqttNetworkConnect implements INetworkConnect {
                     actionListener.onFailure(new ErrorInfo(
                             ErrorCode.QUERY_ALL_MEMBERS_OF_GROUP_FAIL, e
                             .getMessage()));
+
                 }
             }
         }).start();
@@ -764,7 +765,6 @@ public class MqttNetworkConnect implements INetworkConnect {
     }
 
    /* private class MyBroadcaseReceiver extends BroadcastReceiver {//网络状态监听回调
-
         @Override
         public void onReceive(final Context context, Intent intent) {
             String action = intent.getAction();

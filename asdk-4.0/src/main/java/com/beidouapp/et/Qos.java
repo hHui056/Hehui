@@ -70,6 +70,7 @@ public enum Qos {
     public String getName() {
         return m_name;
     }
+
     /**
      * 设置类型名称.
      *

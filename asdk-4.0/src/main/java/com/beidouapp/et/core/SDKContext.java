@@ -104,7 +104,7 @@ public class SDKContext implements ISDKContext, IMessageCenterCallback, OnDiscov
         //====================================================================================================
 
         // timeout 限制在5 - 30秒之间
-        int timeout = Math.max(Math.min(timeoutSecond, 5), 30);
+        int timeout = Math.max(Math.min(timeoutSecond, 30), 5);
         mDiscoverActionListener = listener;
         // 同时进行内外网扫描，在超时时间内有任何一个server返回即成功，否则超时。
         // 扫描MQTT服务器

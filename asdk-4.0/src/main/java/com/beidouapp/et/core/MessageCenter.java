@@ -573,10 +573,22 @@ public class MessageCenter {
         mContext.onMsgSendSuccess(msg);
     }
 
+    /**
+     * 用户状态改变
+     *
+     * @param uid
+     * @param statusCode
+     */
     public void notifyPeerState(String uid, String statusCode) {
         mContext.onPeerState(uid, statusCode);
     }
 
+    /**
+     * 收到文件
+     *
+     * @param senderId
+     * @param fileInfo
+     */
     public void notifyFileArrived(String senderId, DocumentInfo fileInfo) {
         if (fileInfo == null) {
             return;
@@ -707,7 +719,11 @@ public class MessageCenter {
         }
     }
 
-
+    /**
+     * 重连服务器
+     *
+     * @param actionListener
+     */
     public void reConnectSvr(final IActionListener actionListener) {
         if (mServer == null || options == null || mqttNetworkConnect == null) {
             actionListener.onFailure(new ErrorInfo(10010, "has not connect the server before"));
